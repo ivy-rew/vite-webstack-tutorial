@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Button } from '@axonivy/ui-components';
 import '@axonivy/ui-components/lib/style.css';
+import { IvyIcons } from '@axonivy/ui-icons';
+import '@axonivy/ui-icons/lib/ivy-icons.css';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,7 +23,7 @@ function App() {
       <h1>Vite + React</h1>
       <div className="card">
 
-        <Button variant='primary' size='large' onClick={() => setCount((count) => count + 1)}>
+        <Button variant='primary' size='large' icon={IvyIcons.CallOutline} onClick={() => setCount((count) => count + 1)}>
             count is {count}
         </Button>
         <p>

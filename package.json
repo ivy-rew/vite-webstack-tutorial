@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@axonivy/ui-components": "^11.3.0-next.118",
+    "@axonivy/ui-icons": "^11.3.0-next.118",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
