@@ -8,6 +8,7 @@ import { IvyIcons } from '@axonivy/ui-icons';
 import '@axonivy/ui-icons/lib/ivy-icons.css';
 import FruitList from './fruitList';
 import CounterButton from './countButton';
+import SharedButton from './countShared';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -44,9 +45,13 @@ function App() {
       <h1>Lists</h1>
       <FruitList />
 
-      <h1>State</h1>
+      <h1>State: independent</h1>
       <CounterButton init={300}/>
       <CounterButton/>
+
+      <h1>State: shared</h1>
+      <SharedButton count={count} clicked={() => setCount((count) => count + 1)} />
+      <SharedButton count={count} clicked={() => setCount((count) => count + 1)} />
 
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
