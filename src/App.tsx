@@ -9,6 +9,26 @@ import '@axonivy/ui-icons/lib/ivy-icons.css';
 
 function App() {
   const [count, setCount] = useState(0)
+  const user = {
+    name: "rew",
+    mail: "reguel.obscured@axonivy.com"
+  }
+
+  const products = [
+    { title: 'Cabbage', isFruit: false, id: 1 },
+    { title: 'Garlic', isFruit: false, id: 2 },
+    { title: 'Apple', isFruit: true, id: 3 },
+  ];
+  const productItems = products.map(product =>
+    <li
+      key={product.id}
+      style={{
+        color: product.isFruit ? 'magenta' : 'darkgreen'
+      }}
+    >
+      {product.title}
+    </li>
+  );
 
   return (
     <>
@@ -30,6 +50,14 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
+
+      <h1>Styling and Variables</h1>
+      <button className="plain-ok">ok</button>
+      <h2>Hello {user.name} &lt; {user.mail}</h2>
+
+      <h1>Lists</h1>
+      <ul>{productItems}</ul>
+
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
