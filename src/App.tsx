@@ -6,6 +6,7 @@ import { Button } from '@axonivy/ui-components';
 import '@axonivy/ui-components/lib/style.css';
 import { IvyIcons } from '@axonivy/ui-icons';
 import '@axonivy/ui-icons/lib/ivy-icons.css';
+import FruitList from './fruitList';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,22 +14,6 @@ function App() {
     name: "rew",
     mail: "reguel.obscured@axonivy.com"
   }
-
-  const products = [
-    { title: 'Cabbage', isFruit: false, id: 1 },
-    { title: 'Garlic', isFruit: false, id: 2 },
-    { title: 'Apple', isFruit: true, id: 3 },
-  ];
-  const productItems = products.map(product =>
-    <li
-      key={product.id}
-      style={{
-        color: product.isFruit ? 'magenta' : 'darkgreen'
-      }}
-    >
-      {product.title}
-    </li>
-  );
 
   return (
     <>
@@ -56,7 +41,7 @@ function App() {
       <h2>Hello {user.name} &lt; {user.mail}</h2>
 
       <h1>Lists</h1>
-      <ul>{productItems}</ul>
+      <FruitList />
 
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
